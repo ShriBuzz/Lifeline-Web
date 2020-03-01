@@ -6,14 +6,13 @@ import background from "../../assets/bg.png";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
   padding: 2em;
   justify-content: flex-start;
   font-size: 18px;
   background-image: url(${background});
   background-repeat: no-repeat;
   /* background-position: 0; */
-  background-size: 100vw;
+  background-size: cover;
 `;
 
 export const Header = styled.p`
@@ -34,8 +33,15 @@ export const FormContainer = styled.form`
 
 export const FormRow = styled.div`
   width: 62vh;
+  text-align: left;
   flex-direction: row;
   margin-bottom: 1.5em;
+  @media (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const FormInput = styled.input`
@@ -44,6 +50,7 @@ export const FormInput = styled.input`
   text-align: center;
   padding: 0.5em;
   border-bottom: 1px solid #d23a3a;
+  background-color: transparent;
   border-top: none;
   border-left: none;
   border-right: none;
