@@ -57,9 +57,16 @@ export const InputLabel = styled.label`
 
 export const Button = styled.button`
   width: 150px;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   background-color: #ef4023;
   border-style: none;
   border-radius: 2em;
   padding: 0.8em;
+  cursor: pointer;
+  transition: 0.5s;
+  :hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(239, 64, 35, 0.4);
+    background-color: #ff482a;
+  }
 `;

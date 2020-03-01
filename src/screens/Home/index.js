@@ -9,6 +9,7 @@ import Headline from "../../components/headline";
 
 // screens
 import DriverSignup from "../DriverSignup";
+import TraffiSignup from "../TrafficSignup";
 
 const Home = () => {
   const [toggle, setToggle] = useState(true);
@@ -16,7 +17,7 @@ const Home = () => {
   function renderScreen() {
     if (toggle) {
       return <DriverSignup />;
-    } else return <p>Traffic</p>;
+    } else return <TraffiSignup />;
   }
 
   return (
