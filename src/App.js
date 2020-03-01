@@ -1,20 +1,10 @@
 import React from "react";
 
-//component
-import NavBar from "./components/navbar";
-import Headline from "./components/headline";
-
 // screens
-import DriverSignup from "./screens/DriverSignup";
+import Home from "./screens/Home";
 
 function App() {
-  return (
-    <div>
-      <Headline />
-      <NavBar />
-      <DriverSignup />
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
