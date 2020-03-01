@@ -8,6 +8,7 @@ const DriverSignup = () => {
   const [email, setEmail] = useState("");
   const [driverId, setDriverId] = useState("");
   const [password, setPassword] = useState("");
+  const [file, setFile] = useState();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -21,7 +22,6 @@ const DriverSignup = () => {
         <D.FormRow>
           <D.InputLabel>Name</D.InputLabel>
           <D.FormInput
-            className="formInput"
             type="text"
             value={name}
             placeholder="Enter your name..."
@@ -32,7 +32,6 @@ const DriverSignup = () => {
         <D.FormRow>
           <D.InputLabel>Email</D.InputLabel>
           <D.FormInput
-            className="formInput"
             type="email"
             value={email}
             placeholder="Enter your email..."
@@ -43,7 +42,6 @@ const DriverSignup = () => {
         <D.FormRow>
           <D.InputLabel>Contact number</D.InputLabel>
           <D.FormInput
-            className="formInput"
             type="number"
             value={contact}
             placeholder="Enter your contact number..."
@@ -54,7 +52,6 @@ const DriverSignup = () => {
         <D.FormRow>
           <D.InputLabel>Driver Id</D.InputLabel>
           <D.FormInput
-            className="formInput"
             type="text"
             value={driverId}
             placeholder="Enter your Driver id/Licence no..."
@@ -65,12 +62,20 @@ const DriverSignup = () => {
         <D.FormRow>
           <D.InputLabel>Password</D.InputLabel>
           <D.FormInput
-            className="formInput"
             type="password"
             value={password}
             placeholder="Enter your password..."
             onChange={e => setPassword(e.target.value)}
           />
+        </D.FormRow>
+
+        <D.FormRow>
+          <D.FormInput
+            type="file"
+            value={file}
+            onChange={e => setFile(e.target.value)}
+          />
+          <button>Upload</button>
         </D.FormRow>
 
         <D.Button type="submit">Submit</D.Button>
