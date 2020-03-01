@@ -6,12 +6,13 @@ import background from "../../assets/bg.png";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  height: 100%;
   padding: 2em;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: 18px;
   background-image: url(${background});
   background-repeat: no-repeat;
+  /* background-position: 0; */
   background-size: 100vw;
 `;
 
