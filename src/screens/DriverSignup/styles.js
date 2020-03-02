@@ -5,6 +5,7 @@ import background from "../../assets/bg.png";
 
 export const Container = styled.div`
   display: flex;
+  min-height: 70vh;
   flex-direction: column;
   padding: 2em;
   justify-content: flex-start;

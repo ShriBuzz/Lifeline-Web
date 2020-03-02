@@ -58,14 +58,14 @@ const TrafficSignup = () => {
           />
         </D.FormRow>
 
-        <D.FormRow>
+        {/* <D.FormRow>
           <D.FormInput
             type="file"
             value={file}
             onChange={e => setFile(e.target.value)}
           />
           <button>Upload</button>
-        </D.FormRow>
+        </D.FormRow> */}
 
         <D.Button type="submit">Submit</D.Button>
       </D.FormContainer>

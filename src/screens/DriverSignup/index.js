@@ -12,7 +12,7 @@ const DriverSignup = () => {
   const [email, setEmail] = useState("");
   const [driver_id, setDriverId] = useState("");
   const [password, setPassword] = useState("");
-  const [file, setFile] = useState();
+  const [upload, setUpload] = useState();
 
   const inputRef = useRef();
 
@@ -27,6 +27,14 @@ const DriverSignup = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
+    let file = upload;
+    console.log(file);
+    console.log(file.name);
+    // let formdata = new FormData();
+    // formdata.append(file, "file");
+    // formdata.append("name", "image_send");
+    // console.log(formdata);
+
     axios
       .post(`/driver_signup`, {
         // data to be sent
@@ -101,7 +109,11 @@ const DriverSignup = () => {
         </D.FormRow>
 
         <D.FormRow>
-          <D.FormInput type="file" onChange={e => setFile(e.target.files[0])} />
+          <D.FormInput
+            type="file"
+            name="file"
+            onChange={e => setUpload(e.target.files[0])}
+          />
           <button>Upload</button>
         </D.FormRow>
 
