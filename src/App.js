@@ -1,11 +1,10 @@
 import React from "react";
 
 // screens
-import Home from "./screens/Home";
-import Verify from "./screens/Verify";
+import Routes from "./Routes";
 
 function App() {
-  return <Verify />;
+  return <Routes />;
 }
 
 export default App;

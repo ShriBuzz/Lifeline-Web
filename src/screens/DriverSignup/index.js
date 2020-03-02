@@ -108,14 +108,14 @@ const DriverSignup = () => {
           />
         </D.FormRow>
 
-        <D.FormRow>
+        {/* <D.FormRow>
           <D.FormInput
             type="file"
             name="file"
             onChange={e => setUpload(e.target.files[0])}
           />
           <button>Upload</button>
-        </D.FormRow>
+        </D.FormRow> */}
 
         <D.Button type="submit">Submit</D.Button>
       </D.FormContainer>

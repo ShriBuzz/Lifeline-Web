@@ -20,6 +20,11 @@ export const LoginContainer = styled.form`
   background-color: white;
   border-radius: 2em;
   box-shadow: 7px 10px 51px -11px rgba(0, 0, 0, 0.72);
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
 `;
 
 export const Header = styled.p`
