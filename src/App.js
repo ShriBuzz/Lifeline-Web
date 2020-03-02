@@ -2,9 +2,10 @@ import React from "react";
 
 // screens
 import Home from "./screens/Home";
+import Verify from "./screens/Verify";
 
 function App() {
-  return <Home />;
+  return <Verify />;
 }
 
 export default App;
