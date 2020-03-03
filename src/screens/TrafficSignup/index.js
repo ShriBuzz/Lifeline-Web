@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+// package
+import axios from "axios";
+
+// styles
 import * as D from "./styles.js";
 
 const TrafficSignup = () => {
@@ -7,11 +11,33 @@ const TrafficSignup = () => {
   const [contact, setContact] = useState();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [file, setFile] = useState();
+
+  function resetForm() {
+    setName("");
+    setContact();
+    setContact("");
+    setEmail("");
+    setPassword("");
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(name, contact, email, password);
+    axios
+      .post(`/traffic_signup`, {
+        // data to be sent
+        name,
+        email,
+        password,
+        contact
+      })
+      .then(response => {
+        console.log(response.data);
+        resetForm();
+        alert("Successfully registed as Traffic officer.");
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   return (

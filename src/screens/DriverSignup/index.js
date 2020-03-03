@@ -27,9 +27,9 @@ const DriverSignup = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    let file = upload;
-    console.log(file);
-    console.log(file.name);
+    // let file = upload;
+    // console.log(file);
+    // console.log(file.name);
     // let formdata = new FormData();
     // formdata.append(file, "file");
     // formdata.append("name", "image_send");
@@ -47,7 +47,7 @@ const DriverSignup = () => {
       .then(response => {
         console.log(response.data);
         resetForm();
-        alert("Thank You for registering as an Ambulance Driver!");
+        alert("Successfully registed as an Ambulance driver.");
       })
       .catch(error => {
         console.log(error);
